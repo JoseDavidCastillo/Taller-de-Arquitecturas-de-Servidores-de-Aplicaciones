@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MicroSpringBoot Framework</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+        h1 { color: #333; }
+        h2 { color: #666; }
+        p { color: #555; line-height: 1.6; }
+        .endpoint { background: #f5f5f5; padding: 10px; margin: 10px 0; border-left: 4px solid #0066cc; }
+        a { text-decoration: none; color: #0066cc; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<h1>MicroSpringBoot Framework is Running!</h1>
+<h2>IoC Container with Reflective Component Loading</h2>
+<p>This server automatically scans for @RestController classes and registers their @GetMapping methods.</p>
+
+<h3>Available Endpoints:</h3>
+<div class="endpoint">
+    <p><strong>GET /</strong> - Home page</p>
+    <p><a href="/">Visit home</a></p>
+</div>
+
+<div class="endpoint">
+    <p><strong>GET /hello</strong> - Hello World endpoint</p>
+    <p><a href="/hello">Visit /hello</a></p>
+</div>
+
+<div class="endpoint">
+    <p><strong>GET /greeting?name=&lt;name&gt;</strong> - Greeting with parameter</p>
+    <p><a href="/greeting">Visit /greeting (uses default value)</a></p>
+    <p><a href="/greeting?name=MicroSpringBoot">Visit /greeting?name=MicroSpringBoot</a></p>
+</div>
+
+<h3>Features:</h3>
+<ul>
+    <li>Automatic component discovery with @RestController</li>
+    <li>Route mapping with @GetMapping</li>
+    <li>Parameter injection with @RequestParam</li>
+    <li>Static file serving (HTML, CSS, images, etc.)</li>
+    <li>Reflective instantiation of controller classes</li>
+</ul>
+</body>
+</html>
